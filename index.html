@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>Hello World</title>
+
+  <meta name="viewport"
+  content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <link rel="import" href="elements.html">
+</head>
+
+<body fullbleed>
+<template is="auto-binding" id="t">
+  <core-scaffold id="scaffold">
+
+    <nav>
+      <core-toolbar>Elements</core-toolbar>
+
+      <more-route-selector>
+        <core-menu>
+          <core-item icon="Home" label="Home" route="home">
+            <a href="{{urlFor('home')}}"></a>
+          </core-item>
+          <core-item icon="Elements" label="Elements" route="elements">
+            <a href="{{urlFor('elements')}}"></a>
+          </core-item>
+        </core-menu>
+      </more-route-selector>
+    </nav>
+
+      <core-toolbar tool flex>
+        <div>HTML5 Toolkit</div>
+        <span flex></span>
+        <core-icon-button icon="search"></core-icon-button>
+      </core-toolbar>
+
+      <main id="mainContent">
+
+        <more-route-selector>
+
+          <core-pages>
+            <section route="home">
+              <h1>Home</h1>
+              <div>Home page</div>
+            </section>
+            <section route="elements">
+              <h1>Elements</h1>
+              <div>Elements Overview</div>
+            </section>
+          </core-pages>
+
+        </more-route-selector>
+
+      </main>
+
+  </core-scaffold>
+</template>
+<script src="app.js"></script>
+</body>
+</html>
